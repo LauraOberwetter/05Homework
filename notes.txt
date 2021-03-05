@@ -1,0 +1,6 @@
+//notes
+document.ready // to check that jquery is prepped
+// be aware of z-index
+// look back on project tracker
+
+setInterval(displayTime. 1000) // set off time
