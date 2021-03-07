@@ -1,5 +1,5 @@
 var currentDayEl = $('#currentDay');
-var currentTimeEl = moment().format("HH:00 a");
+var currentTimeEl = moment().format("HH:00");
 var saveBtn = $('.saveBtn');
 var timeCol = $('.hour')
 
@@ -12,33 +12,38 @@ function displayTime() { // display the current day in #currentDay
 
 
 for (var i=8; i<17; i++){ //change color of row based on time //get this to work without military time?
-    let selector = "#" + i + "Row"
+    let colorSelector = "#" + i + "Row"
     if ( $("div#" + i).text() < currentTimeEl) {
-        console.log(i);
-            $(selector).addClass("past");
+            $(colorSelector).addClass("past");
         } else if ( $("div#" + i).text() > currentTimeEl) {
-            $(selector).addClass("future");
+            $(colorSelector).addClass("future");
         } else {
-            $(selector).addClass("present");
+            $(colorSelector).addClass("present");
         };
     }
-
-/* console.log("hour: " + $("div#8").text());
-console.log("current time: " + currentTimeEl); */
 
 
 // save to local storage
 
 saveBtn.click(function(){  //event listener --> onClick saveBtn
-    // "this" keyword to connect saveBtn to textarea sibling 
-    // save content to local storage
+    let content = $(this).siblings('textarea').val(); // "this" keyword to connect saveBtn to textarea sibling 
+    localStorage.setItem("textContent" + $(this).parent().attr('id'), content); // save content to local storage
 });
 
+//create loop to retrive content from all rows
 
 $(window).load(function() {   // on load 
-    // retrieve content from local 
-    // storage and place in same row
+    for (var i=8; i<17; i++){
+            let storedContent = localStorage.getItem("textContent" + i + "Row"); // get stored contents from all rows
+            $(i + "RowText").innerHTML = storedContent; // place saved text in same row
+
+        }
 });
+
+
+ 
+    
+
     
     
     
