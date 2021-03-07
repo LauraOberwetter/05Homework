@@ -4,3 +4,4 @@ document.ready // to check that jquery is prepped
 // look back on project tracker
 
 setInterval(displayTime. 1000) // set off time
+
