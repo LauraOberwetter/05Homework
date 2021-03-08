@@ -6,7 +6,7 @@ This is a simple calendar application that allows users to list their daily task
 
 ## Image
 
-![Screen Shot 2021-03-07 at 8 56 40 PM](https://user-images.githubusercontent.com/23666524/110269212-db82e300-7f88-11eb-9583-34eaed1e78c6.png)
+![Screen Shot 2021-03-08 at 11 23 14 AM](https://user-images.githubusercontent.com/23666524/110357280-bcc03300-8000-11eb-9d90-5f5627350e43.png)
 
 ## Link
 
