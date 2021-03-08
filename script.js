@@ -10,7 +10,6 @@ function displayTime() { // display the current day in #currentDay
 }
     displayTime(); // invoke function to display current time
 
-
 for (var i=8; i<17; i++){ //change color of row based on time //get this to work without military time?
     let colorSelector = "#" + i + "Row"
     if ( $("div#" + i).text() < currentTimeEl) {
@@ -44,8 +43,22 @@ function dispText() {   // on load
 
 dispText();
 
- 
-    
+
+//var momentTest = moment().format("h:00A");
+  /* for (var i=8; i<17; i++){ //change color of row based on time
+        let colorSelector = "#" + i + "Row"
+        if (moment().format("h:00A").isAfter($("div#" + i).text())) {
+                $(colorSelector).addClass("past");
+            } else if (moment().format("h:00A").isBefore($("div#" + i).text())) {
+                console.log($("div#" + i).text() + "is after" + momentTest);
+                $(colorSelector).addClass("future");
+            } else {
+                $(colorSelector).addClass("present");
+                console.log($("div#" + i).text() + "=" + momentTest);
+            };
+        } */
+
+
 
     
     
