@@ -32,14 +32,17 @@ saveBtn.click(function(){  //event listener --> onClick saveBtn
 
 //create loop to retrive content from all rows
 
-$(window).load(function() {   // on load 
+function dispText() {   // on load 
     for (var i=8; i<17; i++){
             let storedContent = localStorage.getItem("textContent" + i + "Row"); // get stored contents from all rows
-            $(i + "RowText").innerHTML = storedContent; // place saved text in same row
+            console.log(storedContent); // get stored contents from all rows
+            $("#" + i + "RowText").val(storedContent); // place saved text in same row
 
         }
-});
+};
 
+
+dispText();
 
  
     
